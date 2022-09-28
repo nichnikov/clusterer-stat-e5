@@ -18,4 +18,4 @@ EXPOSE 4500
 
 
 # run the command
-CMD ["python", "./app_json_excel.py"]
+CMD ["python", "./app_interfaces.py"]

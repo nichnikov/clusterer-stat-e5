@@ -1,10 +1,10 @@
 version: "3.9"
 services:
   cl:
-    image: clusterer
+    image: clusterer-stat
     ports:
-    - "8080:8080"
+    - "5001:8080"
   cl_inf:
-    image: clusterer-interfaces
+    image: clusterer-interfaces-stat
     ports:
-    - "4500:4500"
+    - "5002:4500"
