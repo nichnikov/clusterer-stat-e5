@@ -75,8 +75,10 @@ def response_func(clustering_dataframes, response_type="excel"):
             for d in clustering_dataframes:
                 sheet_data = d["clustering_dataframe"]
                 sheet_name = str(d["score"])
-                sheet_data.to_excel(writer, sheet_name=sheet_name, encoding='cp1251', index=False)
-        writer.save()
+                # sheet_data.to_excel(writer, sheet_name=sheet_name, encoding='cp1251', index=False)
+                sheet_data.to_excel(writer, sheet_name=sheet_name, index=False)
+        # writer.save()
+        writer.close()
         return Response(buffer.getvalue(),
                         mimetype='application/vnd.ms-excel',
                         headers=headers)

@@ -1,3 +1,6 @@
+import collections.abc
+collections.MutableMapping = collections.abc.MutableMapping
+
 import os
 from flask_cors import CORS
 from dotenv import load_dotenv
@@ -101,4 +104,4 @@ class ClusteringEcxelExcel(Resource):
 
 if __name__ == "__main__":
     # serve(app, host="0.0.0.0", port=8080)
-    app.run(host='0.0.0.0', port=4500)
+    app.run(host='0.0.0.0', port=8080)
